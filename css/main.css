@@ -1,0 +1,173 @@
+/* => Custom Properties */
+:root {
+  /* => Colors */
+  --PURPLE-COLOR: hsl(259, 100%, 65%);
+  --LIGHT-RED-COLOR: hsl(0, 100%, 67%);
+  --WHITE-COLOR: hsl(0, 0%, 100%);
+  --OFF-WHITE-COLOR: hsl(0, 0%, 94%);
+  --LIGHT-GREY-COLOR: hsl(0, 0%, 86%);
+  --SMOKEY-GREY-COLOR: hsl(0, 1%, 44%);
+  --OFF-BLACK-COLOR: hsl(0, 0%, 8%);
+  --TEXT-COLOR: #333;
+
+  /* => Transitions */
+  --main-transition: 0.3s;
+}
+
+/* => Resets  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* => General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  min-height: 100vh;
+  background-color: var(--OFF-WHITE-COLOR);
+  color: var(--OFF-BLACK-COLOR);
+  display: grid;
+  place-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+/* => Component */
+.container {
+  width: clamp(300px, 90vw, 700px);
+  padding: 3rem 1.5rem;
+  margin: 0 auto;
+}
+
+/* => Main Element */
+main {
+  border-radius: 22px 22px 120px;
+  background-color: var(--WHITE-COLOR);
+
+  .content {
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 22px;
+      font-style: italic;
+      color: var(--TEXT-COLOR);
+      letter-spacing: 1.5px;
+    }
+
+    .date-of-birth {
+      max-width: 500px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      > div {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 4px;
+        min-width: 85px;
+      }
+
+      label {
+        font-size: 0.85rem;
+        color: var(--SMOKEY-GREY-COLOR);
+        transition: var(--main-transition);
+        align-self: flex-start;
+        margin-left: 3px;
+        @media (min-width: 768px) {
+          margin-left: 12px;
+        }
+      }
+
+      input {
+        width: 100%;
+        border-radius: 0.8rem;
+        padding: 18px 8px;
+        outline: none;
+        border: 1px solid var(--LIGHT-GREY-COLOR);
+        color: var(--SMOKEY-GREY-COLOR);
+        transition: var(--main-transition);
+        @media (max-width: 767px) {
+          font-size: 22px;
+        }
+        @media (min-width: 768px) {
+          padding-left: 16px;
+        }
+
+        &:where(:hover, :focus) {
+          border-color: var(--PURPLE-COLOR);
+        }
+      }
+
+      button {
+        cursor: pointer;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        left: 50%;
+        bottom: -80px;
+        transform: translateX(-50%);
+        @media (min-width: 768px) {
+          left: 120%;
+          transform: translateX(0);
+        }
+
+        svg {
+          fill: var(--WHITE-COLOR);
+          width: 62px;
+          height: 62px;
+          background-color: var(--PURPLE-COLOR);
+          border-radius: 50%;
+          transition: var(--main-transition);
+
+          path {
+            transform: translateY(-5px);
+          }
+        }
+
+        &:where(:hover, :focus) {
+          svg {
+            background-color: var(--OFF-BLACK-COLOR);
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    .age {
+      color: var(--PURPLE-COLOR);
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      font-size: 60px;
+      font-style: italic;
+      font-weight: bolder;
+      border-top: thin solid var(--LIGHT-GREY-COLOR);
+
+      @media (max-width: 767px) {
+        font-size: 50px;
+      }
+
+      span {
+        color: var(--TEXT-COLOR);
+      }
+    }
+  }
+}
+
+/* => Footer Element */
+footer {
+  .container {
+    padding: 0;
+  }
+
+  font-size: 14px;
+  text-align: center;
+  margin-top: 0.5rem;
+}
