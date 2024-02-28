@@ -38,6 +38,12 @@ button {
   font: inherit;
 }
 
+/* => Utility Classes */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
 /* => Component */
 .container {
   width: clamp(300px, 90vw, 700px);
