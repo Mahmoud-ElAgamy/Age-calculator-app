@@ -52,6 +52,11 @@ button {
 }
 
 /* => Main Element */
+main {
+  border-radius: 22px 22px 120px;
+  background-color: var(--WHITE-COLOR);
+}
+
 main h2 {
   margin-bottom: 1rem;
   font-size: 22px;
