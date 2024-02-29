@@ -52,128 +52,124 @@ button {
 }
 
 /* => Main Element */
-main {
-  border-radius: 22px 22px 120px;
-  background-color: var(--WHITE-COLOR);
+main h2 {
+  margin-bottom: 1rem;
+  font-size: 22px;
+  font-style: italic;
+  color: var(--TEXT-COLOR);
+  letter-spacing: 1.5px;
+}
 
-  .content {
-    h2 {
-      margin-bottom: 1rem;
-      font-size: 22px;
-      font-style: italic;
-      color: var(--TEXT-COLOR);
-      letter-spacing: 1.5px;
-    }
+main .date-of-birth {
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-    .date-of-birth {
-      max-width: 500px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+.date-of-birth > div {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 4px;
+  min-width: 85px;
+}
 
-      > div {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 4px;
-        min-width: 85px;
-      }
+.date-of-birth label {
+  font-size: 0.85rem;
+  color: var(--SMOKEY-GREY-COLOR);
+  transition: var(--main-transition);
+  align-self: flex-start;
+  margin-left: 3px;
+}
 
-      label {
-        font-size: 0.85rem;
-        color: var(--SMOKEY-GREY-COLOR);
-        transition: var(--main-transition);
-        align-self: flex-start;
-        margin-left: 3px;
-        @media (min-width: 768px) {
-          margin-left: 12px;
-        }
-      }
+.date-of-birth input {
+  width: 100%;
+  border-radius: 0.8rem;
+  padding: 18px 8px;
+  outline: none;
+  border: 1px solid var(--LIGHT-GREY-COLOR);
+  color: var(--SMOKEY-GREY-COLOR);
+  transition: var(--main-transition);
+}
 
-      input {
-        width: 100%;
-        border-radius: 0.8rem;
-        padding: 18px 8px;
-        outline: none;
-        border: 1px solid var(--LIGHT-GREY-COLOR);
-        color: var(--SMOKEY-GREY-COLOR);
-        transition: var(--main-transition);
-        @media (max-width: 767px) {
-          font-size: 22px;
-        }
-        @media (min-width: 768px) {
-          padding-left: 16px;
-        }
+.date-of-birth button {
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  left: 50%;
+  bottom: -80px;
+  transform: translateX(-50%);
+}
 
-        &:where(:hover, :focus) {
-          border-color: var(--PURPLE-COLOR);
-        }
-      }
+.date-of-birth button svg {
+  fill: var(--WHITE-COLOR);
+  width: 62px;
+  height: 62px;
+  background-color: var(--PURPLE-COLOR);
+  border-radius: 50%;
+  transition: var(--main-transition);
+}
 
-      button {
-        cursor: pointer;
-        outline: none;
-        background-color: transparent;
-        border: none;
-        position: absolute;
-        left: 50%;
-        bottom: -80px;
-        transform: translateX(-50%);
-        @media (min-width: 768px) {
-          left: 120%;
-          transform: translateX(0);
-        }
+.date-of-birth button svg path {
+  transform: translateY(-5px);
+}
 
-        svg {
-          fill: var(--WHITE-COLOR);
-          width: 62px;
-          height: 62px;
-          background-color: var(--PURPLE-COLOR);
-          border-radius: 50%;
-          transition: var(--main-transition);
+.date-of-birth button:where(:hover, :focus) svg {
+  background-color: var(--OFF-BLACK-COLOR);
+  transform: rotate(180deg);
+}
 
-          path {
-            transform: translateY(-5px);
-          }
-        }
+main .age {
+  color: var(--PURPLE-COLOR);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: bolder;
+  border-top: thin solid var(--LIGHT-GREY-COLOR);
+}
 
-        &:where(:hover, :focus) {
-          svg {
-            background-color: var(--OFF-BLACK-COLOR);
-            transform: rotate(180deg);
-          }
-        }
-      }
-    }
-
-    .age {
-      color: var(--PURPLE-COLOR);
-      margin-top: 2.5rem;
-      padding-top: 2.5rem;
-      font-size: 60px;
-      font-style: italic;
-      font-weight: bolder;
-      border-top: thin solid var(--LIGHT-GREY-COLOR);
-
-      @media (max-width: 767px) {
-        font-size: 50px;
-      }
-
-      span {
-        color: var(--TEXT-COLOR);
-      }
-    }
-  }
+.age span {
+  color: var(--TEXT-COLOR);
 }
 
 /* => Footer Element */
 footer {
-  .container {
-    padding: 0;
-  }
-
   font-size: 14px;
   text-align: center;
   margin-top: 0.5rem;
+}
+
+footer .container {
+  padding: 0;
+}
+
+/* => Media Queries */
+@media (max-width: 767px) {
+  .date-of-birth input {
+    font-size: 22px;
+  }
+
+  main .age {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .date-of-birth label {
+    margin-left: 12px;
+  }
+
+  .date-of-birth input {
+    padding-left: 16px;
+  }
+
+  .date-of-birth button {
+    left: 120%;
+    transform: translateX(0);
+  }
 }
