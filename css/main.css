@@ -94,6 +94,10 @@ main .date-of-birth {
   transition: var(--main-transition);
 }
 
+.date-of-birth input:where(:hover, :focus) {
+  border-color: var(--PURPLE-COLOR);
+}
+
 .date-of-birth button {
   cursor: pointer;
   outline: none;
