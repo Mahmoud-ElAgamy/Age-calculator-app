@@ -33,20 +33,14 @@ const calcAge = (day, month, year) => {
     (dateNow - userBirthDayDate.getTime()) / 3.15576e10
   );
 
-  const ageInMonths =
-    dateNow.getMonth() < userBirthDayDate.getMonth()
-      ? 12 - userBirthDayDate.getMonth() + 1
-      : dateNow.getMonth() === userBirthDayDate.getMonth()
-      ? 11
-      : dateNow.getMonth() - userBirthDayDate.getMonth()
-      ? dateNow.getMonth() - userBirthDayDate.getMonth()
-      : "";
+  let ageInMonths = dateNow.getMonth() + 1 - month;
+  let ageInDays = dateNow.getDate() - day;
 
-  const ageInDays =
-    dateNow.getDate() < userBirthDayDate.getDate()
-      ? Math.abs(dateNow.getDate() - userBirthDayDate.getDate()) +
-        dateNow.getDate()
-      : dateNow.getDate() - userBirthDayDate.getDate();
+  if (ageInMonths < 0) ageInMonths += 12;
+  if (ageInDays < 0) {
+    ageInMonths--;
+    ageInDays += 31;
+  }
 
   ageInYearsEle.innerHTML = `${ageInYears} <span>Years</span>`;
   ageInMonthsEle.innerHTML = `${ageInMonths} <span>${
