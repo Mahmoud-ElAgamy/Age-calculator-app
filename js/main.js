@@ -36,7 +36,13 @@ const calcAge = (day, month, year) => {
   let ageInMonths = dateNow.getMonth() + 1 - month;
   let ageInDays = dateNow.getDate() - day;
 
-  if (ageInMonths < 0) ageInMonths += 12;
+  if (
+    ageInMonths < 0 ||
+    (userBirthDayDate.getMonth() === dateNow.getMonth() &&
+      userBirthDayDate.getDate() > dateNow.getDate())
+  )
+    ageInMonths += 12;
+
   if (ageInDays < 0) {
     ageInMonths--;
     ageInDays += 31;
