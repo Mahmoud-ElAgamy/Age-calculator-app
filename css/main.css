@@ -55,6 +55,7 @@ button {
 main {
   border-radius: 22px 22px 120px;
   background-color: var(--WHITE-COLOR);
+  box-shadow: 0 0 10px #ddd;
 }
 
 main h2 {
