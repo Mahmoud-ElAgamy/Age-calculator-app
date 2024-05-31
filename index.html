@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
     <title>Age calculator app</title>
 
     <!-- => Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
-      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- => Main CSS File -->
     <link rel="stylesheet" href="css/main.css" />
@@ -28,32 +34,58 @@
           <h2>Enter your birthday:</h2>
           <form id="date-of-birth" class="date-of-birth">
             <div class="days">
-              <input type="number" id="day-input" placeholder="DD" required min="1" max="31" />
+              <input
+                type="number"
+                id="day-input"
+                placeholder="DD"
+                required
+                min="1"
+                max="31"
+              />
               <label for="day-input">DAY</label>
             </div>
             <div class="months">
-              <input type="number" id="month-input" placeholder="MM" required min="1" max="12" />
+              <input
+                type="number"
+                id="month-input"
+                placeholder="MM"
+                required
+                min="1"
+                max="12"
+              />
               <label for="month-input">MONTH</label>
             </div>
             <div class="years">
-              <input type="number" id="year-input" placeholder="YYYY" required min="1900" />
+              <input
+                type="number"
+                id="year-input"
+                placeholder="YYYY"
+                required
+                min="1900"
+              />
               <label for="year-input">YEAR</label>
             </div>
             <button type="submit" title="Submit">
-              <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
-                <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="46"
+                height="44"
+                viewBox="0 0 46 44"
+              >
+                <path
+                  d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                />
               </svg>
             </button>
           </form>
 
           <div id="age" class="age">
             <div class="year">-- <span>Years</span></div>
-            <div class="month">-- <span>Month</span></div>
-            <div class="day">-- <span>Day</span></div>
+            <div class="month">-- <span>Months</span></div>
+            <div class="day">-- <span>Days</span></div>
           </div>
         </div>
       </div>
     </main>
   </body>
-
 </html>

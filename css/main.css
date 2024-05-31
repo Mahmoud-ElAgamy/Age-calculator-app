@@ -55,7 +55,7 @@ button {
 main {
   border-radius: 22px 22px 120px;
   background-color: var(--WHITE-COLOR);
-  box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 2px 10px 2px rgb(221, 221, 221, 0.5);
 }
 
 main h2 {
@@ -97,6 +97,7 @@ main .date-of-birth {
   border: 1px solid var(--LIGHT-GREY-COLOR);
   color: var(--SMOKEY-GREY-COLOR);
   transition: var(--main-transition);
+  caret-color: var(--PURPLE-COLOR);
 }
 
 .date-of-birth input:is(:hover, :focus) {
