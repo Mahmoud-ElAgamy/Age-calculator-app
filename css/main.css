@@ -8,7 +8,7 @@
   --LIGHT-GREY-COLOR: hsl(0, 0%, 86%);
   --SMOKEY-GREY-COLOR: hsl(0, 1%, 44%);
   --OFF-BLACK-COLOR: hsl(0, 0%, 8%);
-  --TEXT-COLOR: #333;
+  --TEXT-COLOR: #212529;
 
   /* => Transitions */
   --main-transition: 0.3s;
