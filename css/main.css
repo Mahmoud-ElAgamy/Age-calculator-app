@@ -11,7 +11,7 @@
   --TEXT-COLOR: #212529;
 
   /* => Transitions */
-  --main-transition: 0.3s;
+  --MAIN-TRANSITION: 0.3s;
 }
 
 /* => Resets  */
@@ -84,7 +84,7 @@ main .date-of-birth {
 .date-of-birth label {
   font-size: 0.85rem;
   color: var(--SMOKEY-GREY-COLOR);
-  transition: var(--main-transition);
+  transition: var(--MAIN-TRANSITION);
   align-self: flex-start;
   margin-left: 3px;
 }
@@ -96,7 +96,7 @@ main .date-of-birth {
   outline: none;
   border: 1px solid var(--LIGHT-GREY-COLOR);
   color: var(--SMOKEY-GREY-COLOR);
-  transition: var(--main-transition);
+  transition: var(--MAIN-TRANSITION);
   caret-color: var(--PURPLE-COLOR);
 }
 
@@ -121,7 +121,7 @@ main .date-of-birth {
   height: 62px;
   background-color: var(--PURPLE-COLOR);
   border-radius: 50%;
-  transition: var(--main-transition);
+  transition: var(--MAIN-TRANSITION);
 }
 
 .date-of-birth button svg path {
